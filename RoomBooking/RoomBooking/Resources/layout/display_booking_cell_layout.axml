@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@android:color/transparent"
+	android:paddingTop="5dp"
+	android:gravity="end"
+	>
+	<TextView
+    android:id="@+id/textViewTimeInterval"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:text="22:30 - 23:00"
+	android:textColor="@color/colorWhite"
+	android:fontFamily="@font/poppins_regular"
+	android:textSize="20dp"
+    android:textAlignment="textEnd"
+/>
+	<TextView 
+	android:id="@+id/textViewPurpose"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:text="AMT Meeting"
+	android:textColor="@color/colorWhite"
+	android:fontFamily="@font/poppins_regular"
+	android:textSize="20dp"
+    android:textAlignment="textEnd"
+/>
+	<TextView 
+	android:id="@+id/textViewBookedBy"
+	android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:text="by test@successive.tech"
+	android:textColor="@color/colorWhite"
+	android:fontFamily="@font/poppins_regular"
+	android:textSize="15dp"
+    android:textAlignment="textEnd"
+/>
+	</LinearLayout>

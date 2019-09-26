@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="#151934"
+	>
+	<LinearLayout
+	android:id="@+id/linearLayoutCompleteParent"
+	android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	>
+	<View
+	android:id="@+id/viewMeetingState"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+	android:layout_weight="0.08"
+	android:background="@color/colorOrange"/>
+
+	<LinearLayout
+	android:id="@+id/linearLayoutParent"
+	android:orientation="vertical"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+	android:layout_weight="1"
+	>
+	<LinearLayout
+	android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+	>
+	<View
+	android:layout_width="0dp"
+    android:layout_height="match_parent"
+	android:layout_weight="0.2"
+/>
+	<TextView
+	android:id="@+id/textViewRoomName"
+	android:layout_width="0dp"
+    android:layout_height="wrap_content"
+	android:layout_weight="0.8"
+	android:text="Room Display Ground Floor"
+	android:textColor="@color/colorWhite"	
+	android:textSize="50dp"
+	android:textStyle="bold"
+	android:textAlignment="center"
+	android:fontFamily="@font/poppins_bold"
+/>
+	<ImageView
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+	android:layout_weight="0.2"
+	android:src="@drawable/logo"
+	android:layout_gravity="right"
+	/>
+</LinearLayout>
+	<LinearLayout
+	android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+	android:layout_weight="1"
+	android:paddingTop="30dp"
+	>
+	<LinearLayout
+	android:orientation="vertical"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+	android:layout_weight="0.6"
+	android:gravity="center_vertical"
+	android:paddingLeft="20dp"
+	> 
+    <TextView
+	android:id="@+id/textViewCurrentTime"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:text="20:19"
+	android:textSize="30dp"
+	android:textColor="@color/colorWhite"
+	android:fontFamily="@font/poppins_regular"
+	/>	
+	<TextView
+	android:id="@+id/textViewCurrentDay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:text="Sunday"
+	android:textColor="@color/colorWhite"
+	android:textSize="30dp"
+	android:fontFamily="@font/poppins_regular"
+	/>
+   <TextView
+	android:id="@+id/textViewCurrentDate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:text="5 May,2013"
+	android:textColor="@color/colorWhite"
+	android:textSize="30dp"
+	android:fontFamily="@font/poppins_regular"
+	/>
+	
+
+	</LinearLayout>
+	<LinearLayout
+	android:orientation="vertical"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+	android:layout_weight="1"
+	android:gravity="right"
+	android:paddingRight="20dp"
+	android:background="@android:color/transparent"
+	>
+   <LinearLayout
+	android:id="@+id/linearLayoutOngoingMeeting"
+	android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	>
+	<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:text="Ongoing Meeting"
+	android:textColor="@color/colorOrange"
+	android:textSize="30dp"
+    android:textAlignment="textEnd"
+	android:fontFamily="@font/poppins_semibold"/>
+    <TextView
+	android:id="@+id/textViewOngoingTimeInterval"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:textColor="@color/colorWhite"
+	android:text="20:15 - 21:15"
+	android:textSize="20dp"
+	android:textAlignment="textEnd"
+	android:fontFamily="@font/poppins_regular"
+	/>
+<TextView
+	android:id="@+id/textViewPurpose"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:textColor="@color/colorWhite"
+    android:text="AMT Meeting"
+	android:layout_gravity="end"
+    android:textAlignment="textEnd"
+	android:textSize="20dp"
+	android:fontFamily="@font/poppins_regular"
+	/>
+	<TextView
+	android:id="@+id/textViewBookedBy"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:textColor="@color/colorWhite"
+    android:text="Booked by test@successive.tech"
+	android:layout_gravity="end"
+    android:textAlignment="textEnd"
+	android:textSize="15dp"
+	android:fontFamily="@font/poppins_regular"
+	/>
+	<LinearLayout
+	android:orientation="horizontal"
+	android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+							android:gravity="end">
+	<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:textColor="@color/colorWhite"	
+	android:text="Meeting ends in "
+	android:layout_gravity="end"
+	android:textSize="20dp"
+	android:textAlignment="textEnd"
+	android:fontFamily="@font/poppins_regular"
+	/>
+	<TextView
+	android:id="@+id/textViewOngoingCountDown"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+	android:textColor="@color/colorWhite"	
+	android:text="00:56 h"
+	android:textSize="20dp"
+	android:textAlignment="textEnd"
+	android:fontFamily="@font/poppins_regular"
+	/>
+	</LinearLayout>
+	
+	
+	</LinearLayout>
+	
+   <LinearLayout
+	android:id="@+id/linearLayoutAvailableMeeting"
+	android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:background="@android:color/transparent"
+	>
+	<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:text="Available Meeting"
+	android:textColor="@color/colorGreen"
+	android:textSize="30dp"
+	android:fontFamily="@font/poppins_semibold"
+	android:textAlignment="textEnd"
+/>
+    <TextView
+	android:id="@+id/textViewShowAvailavleCountDown"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:textColor="@color/colorWhite"
+	android:text="20:15 - 21:15"
+	android:textSize="25dp"
+	android:textAlignment="textEnd"
+	android:fontFamily="@font/poppins_semibold"
+	/>
+	</LinearLayout>
+	<TextView
+	android:id="@+id/textViewUpcomingMeetings"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:text="Upcoming Meetings"
+	android:textColor="@color/colorGreen"
+	android:textSize="25dp"
+	android:layout_marginTop="5dp"
+	android:textAlignment="textEnd"
+	android:fontFamily="@font/poppins_regular"
+	/>
+	<LinearLayout
+						android:id="@+id/frameLayout"
+						android:layout_height="match_parent"
+						android:layout_width="match_parent"
+						android:gravity="right"
+						android:orientation="vertical"
+>
+	<ListView
+	android:id="@+id/listViewMeetings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:layout_gravity="end"
+	android:divider="@null"
+	android:dividerHeight="0dp"
+    android:isScrollContainer="false"	
+	/>
+						<View
+							android:visibility="gone"
+							android:id="@+id/viewRoomDisplay"
+							android:layout_height="match_parent"
+							android:layout_width="match_parent"
+							android:background="@color/colorWhite"/>
+	
+	</LinearLayout>
+	</LinearLayout>
+	</LinearLayout>
+</LinearLayout>
+	</LinearLayout>
+
+	<ProgressBar
+		android:id="@+id/progressBar"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_centerInParent="true"
+		android:indeterminateTint="@color/colorWhite"
+	/>
+	
+	<TextView
+	android:id="@+id/textViewNoDataFound"
+	android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:text="No meetings available"
+	android:layout_centerInParent="true"
+	android:backgroundTint="@color/colorBlack"
+	android:textAlignment="center"
+	android:gravity="center_vertical"
+	android:visibility="gone"
+android:fontFamily="@font/poppins_regular"
+		android:textColor="@color/colorWhite"
+   />
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<resources>
+  <string name="app_name">Meeting Room</string>
+  <string name="action_settings">Settings</string>
+  <string name="room_display">Room Display Ground Floor</string>
+  <string name="ongoing_meeting">Ongoing Meeting</string>
+  <string name="available_meeting">Available Meeting</string>
+  <string name="date_format">dd MMM, yyyy</string>
+  <string name="time_interval_format">HH:mm</string>
+  <string name="room_data">RoomData</string>
+  <string name="booked_via">by </string>
+  <string name="time">00</string>
+  <string name="hour">h</string>
+  <string name="meeting_ends_in">Meeting ends in </string>
+  <string name="base_url"> </string>
+  <string name="network_connection_lost">No network connection</string>
+  <string name="booking_list">booking_list</string>
+  </resources>
