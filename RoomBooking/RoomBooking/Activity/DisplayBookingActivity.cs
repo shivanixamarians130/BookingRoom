@@ -53,8 +53,8 @@ namespace RoomBooking.Activity
             {
                 base.OnCreate(savedInstanceState);
                 this.Window.AddFlags(WindowManagerFlags.Fullscreen | WindowManagerFlags.TurnScreenOn);
-               // CurrentRoom = JsonConvert.DeserializeObject<RoomModel>(Intent.GetStringExtra(Resources.GetString(Resource.String.room_data)));
-                 CurrentRoom = new RoomModel(2, "Meeting Room");
+                CurrentRoom = JsonConvert.DeserializeObject<RoomModel>(Intent.GetStringExtra(Resources.GetString(Resource.String.room_data)));
+               //  CurrentRoom = new RoomModel(2, "Meeting Room");
                 SetContentView(Resource.Layout.display_booking_layout);
                 ListViewBookings = FindViewById<ListView>(Resource.Id.listViewMeetings);
                 OngoingLinearLayout = FindViewById<LinearLayout>(Resource.Id.linearLayoutOngoingMeeting);
@@ -306,19 +306,19 @@ namespace RoomBooking.Activity
             {
                 bool check = false;
 
-                //  Tuple<string, RoomBookingModel> data = await BookingHelper.GetBookings(CurrentRoom.Id);
-                //if (!string.IsNullOrEmpty(data.Item1))
-                //{
-                //    Activity.RunOnUiThread(() =>
-                //    {
-                //        Toast.MakeText(Activity, data.Item1, ToastLength.Short).Show();
-                //    });
-                //    return;
-                //}
-                // RoomBookingModel model = data.Item2;
-                //  List<BookingModel> list = model.data;
+                Tuple<string, RoomBookingModel> data = await BookingHelper.GetBookings(CurrentRoom.Id);
+                if (!string.IsNullOrEmpty(data.Item1))
+                {
+                    Activity.RunOnUiThread(() =>
+                    {
+                        Toast.MakeText(Activity, data.Item1, ToastLength.Short).Show();
+                    });
+                    return;
+                }
+                RoomBookingModel model = data.Item2;
+                List<BookingDetailModel> list = model.data;
 
-                List<BookingDetailModel> list = await BookingHelper.GetBookings(CurrentRoom.Id);
+                //List<BookingDetailModel> list = await BookingHelper.GetBookings(CurrentRoom.Id);
                 if (BookingList != null && BookingList.Count > 0)
                     check = list.Equals(BookingList);
                 BookingList = list;
